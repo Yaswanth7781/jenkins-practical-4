@@ -1,0 +1,1 @@
+print("{} yaswanth".format(100))
