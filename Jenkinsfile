@@ -5,19 +5,19 @@ pipeline {
 
         stage('Check Docker') {
             steps {
-                bat 'docker --version'
+                sh 'docker --version'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t jenkins-docker-demo .'
+                sh 'docker build -t jenkins-docker-demo .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run --rm jenkins-docker-demo'
+                sh 'docker run --rm jenkins-docker-demo'
             }
         }
     }
